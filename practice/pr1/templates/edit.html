@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="{% url 'edit' %}" method="POST">
+        {%csrf_token%}
+        <label for="name">NAME : </label><input class="enter-name" name="name" type="text" value={{person.name}}>
+        <label for="mobile">MOBILE NO :</label><input class="enter-mobile" name="mobile" type="text" value="{{person.mobile}}">
+        <input type="submit">
+    </form>
+</body>
+</html>
